@@ -9,14 +9,17 @@ public class CorsConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**") // Libera para todos os endpoints da sua API
+        registry.addMapping("/**") // Libera todos os caminhos da API
                 .allowedOrigins(
-                        "https://kind-meadow-0c396230f.6.azurestaticapps.net", // Seu Web App
-                        "https://nice-smoke-03a138b0f.4.azurestaticapps.net",  // Seu Admin
-                        "http://localhost:5173", // Libera o localhost do Vite para você testar na sua máquina!
-                        "http://localhost:3000"  // Caso você use a porta 3000 também
+                        // 1. URLs Locais (Para você testar no seu PC)
+                        "http://localhost:5173",
+                        "http://localhost:3000",
+
+                        // 2. URLs da Vercel (Substitua pelos links que a Vercel te der)
+                        "https://rnplanner-admin.vercel.app",
+                        "https://rnplanner-web.vercel.app"
                 )
-                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS") // Métodos permitidos
+                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                 .allowedHeaders("*")
                 .allowCredentials(true);
     }
