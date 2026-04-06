@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/lancamento-manual")
-@CrossOrigin(origins = "*")
 @RequiredArgsConstructor
 public class LancamentoManualController {
 

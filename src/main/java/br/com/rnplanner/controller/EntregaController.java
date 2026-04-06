@@ -10,7 +10,6 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/entregas")
-@CrossOrigin(origins = "*")
 @RequiredArgsConstructor
 public class EntregaController {
 

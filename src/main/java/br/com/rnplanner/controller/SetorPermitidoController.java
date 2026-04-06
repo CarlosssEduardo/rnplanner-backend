@@ -9,7 +9,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/setores-vip")
-@CrossOrigin(origins = "*")
 public class SetorPermitidoController {
 
     private final SetorPermitidoRepository repository;

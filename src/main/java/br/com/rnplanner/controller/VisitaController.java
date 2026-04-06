@@ -19,7 +19,6 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/visitas")
-@CrossOrigin(origins = "*")
 public class VisitaController {
 
     private final VisitaService visitaService;

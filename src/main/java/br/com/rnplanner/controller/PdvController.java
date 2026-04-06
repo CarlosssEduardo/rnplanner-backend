@@ -17,7 +17,6 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/pdvs")
-@CrossOrigin(origins = "*")
 public class PdvController {
 
     private final PdvRepository pdvRepository;
