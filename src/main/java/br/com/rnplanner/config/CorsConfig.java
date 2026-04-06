@@ -10,10 +10,9 @@ public class CorsConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                // O segredo está aqui: permitimos qualquer subdomínio do vercel e qualquer porta do localhost
                 .allowedOriginPatterns(
-                        "https://rnplanner-*.vercel.app",
-                        "http://localhost:[*]",
+                        "https://*.vercel.app",   // Aceita QUALQUER link da Vercel (incluindo esses de git-main)
+                        "http://localhost:[*]",   // Aceita o seu PC em qualquer porta
                         "http://127.0.0.1:[*]"
                 )
                 .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
