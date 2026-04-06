@@ -41,7 +41,7 @@ public class EntregaService {
     public int importarCsv(MultipartFile file) throws Exception {
         try (BufferedReader br = new BufferedReader(new InputStreamReader(file.getInputStream(), StandardCharsets.UTF_8))) {
 
-            entregaRepository.deleteAll();
+            entregaRepository.deleteAllInBatch();
             List<Entrega> entregas = new ArrayList<>();
             String linha;
             boolean primeiraLinha = true;
